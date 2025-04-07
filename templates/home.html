@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Week-3 Assignment</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+    <div class="topnav">
+        <div style="float: left;">My Website</div>
+        <div class="hamburger"><img src="{% static 'images/hamburger.png' %}" width="25px"></div>
+        <div class="topnav_r">
+            <ul>
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+                <li><a>Item 3</a></li>
+                <li><a>Item 4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="head">Welcome to MyHome</div>
+    <main>
+        {% for i in "01234567" %}
+        <div class="box">
+            <div id="p{{ i }}">
+                <img src="{% static 'images/sample.png' %}" alt="img">
+            </div>
+            <div id="div{{ i }}">
+                <div class="title">景點名稱 {{ i }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+
+</html>
