@@ -1,9 +1,9 @@
 from django.views.generic import ListView
-from .models import Post
+from .models import News
 
 # Create your views here.
 
 
 class BlogListView(ListView):
-    model = Post
+    model = News
     template_name = "home.html"
